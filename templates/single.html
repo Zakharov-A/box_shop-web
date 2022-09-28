@@ -1,13 +1,18 @@
-{% load static %}
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
 <html>
 <head>
-<title>BOX SHOP an E-Commerce online Shopping Category Flat Bootstarp responsive Website Template| Home :: w3layouts</title>
+<title>BOX SHOP a E-commerce online Shopping Category Flat Bootstarp responsive Website Template| Single :: w3layouts</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="js/jquery.min.js"></script>
 <!-- Custom Theme files -->
-<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -18,29 +23,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 <!-- start menu -->
-<link href="{% static 'css/megamenu.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="js/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
-<!-- start slider -->
-<script src="{% static 'js/responsiveslides.min.js' %}"></script>
- <script>
-    $(function () {
-      $("#slider").responsiveSlides({
-      	auto: true,
-      	speed: 500,
-        namespace: "callbacks",
-        pager: true,
-      });
-    });
-  </script>
-<!--end slider -->
-<link rel="stylesheet" href="{% static 'css/flexslider.css' %}" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/etalage.css">
+<script src="js/jquery.etalage.min.js"></script>
+<script>
+			jQuery(document).ready(function($){
+
+				$('#etalage').etalage({
+					thumb_image_width: 300,
+					thumb_image_height: 400,
+					source_image_width: 800,
+					source_image_height: 1000,
+					show_hint: true,
+					click_callback: function(image_anchor, instance_id){
+						alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+					}
+				});
+
+			});
+		</script>
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 				<script type="text/javascript">
 			$(window).load(function() {
 				$("#flexiselDemo").flexisel({
-					visibleItems: 5,
+					visibleItems: 4,
 					animationSpeed: 1000,
-					autoPlay: false,
+					autoPlay: true,
 					autoPlaySpeed: 3000,    		
 					pauseOnHover: true,
 					enableResponsiveBreakpoints: true,
@@ -62,7 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			    
 			});
 		</script>
-		<script type="text/javascript" src="{% static 'js/jquery.flexisel.js' %}"></script>
+		<script type="text/javascript" src="js/jquery.flexisel.js"></script>
 </head>
 <body>
 	<!-- header-section-starts -->
@@ -83,7 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</li>
 						<li class="login">
 							<i class="lock"></i>
-							<a href="login.html">Login</a>|
+							<a href="login.html">Log In/</a>
 						</li>
 						<li>
 							<i class="cart"></i>
@@ -174,7 +184,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<li><a href="single.html">my shopping bag</a></li>
 									<li><a href="products.html">brands</a></li>
 									<li><a href="products.html">create wishlist</a></li>
-								</ul>	
+								</ul>
 							</div>						
 						</div>
 						<div class="col1">
@@ -259,13 +269,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="h_nav">
 								<h4>account</h4>
 								<ul>
-									<li><a href="products.html">login</a></li>
-									<li><a href="products.html">create an account</a></li>
+									<li><a href="login.html">login</a></li>
+									<li><a href="register.html">create an account</a></li>
 									<li><a href="products.html">create wishlist</a></li>
-									<li><a href="products.html">my shopping bag</a></li>
+									<li><a href="single.html">my shopping bag</a></li>
 									<li><a href="products.html">brands</a></li>
 									<li><a href="products.html">create wishlist</a></li>
-								</ul>	
+								</ul>
 							</div>						
 						</div>
 						<div class="col1">
@@ -350,10 +360,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="h_nav">
 								<h4>account</h4>
 								<ul>
-									<li><a href="products.html">login</a></li>
-									<li><a href="products.html">create an account</a></li>
+									<li><a href="login.html">login</a></li>
+									<li><a href="register.html">create an account</a></li>
 									<li><a href="products.html">create wishlist</a></li>
-									<li><a href="products.html">my shopping bag</a></li>
+									<li><a href="single.html">my shopping bag</a></li>
 									<li><a href="products.html">brands</a></li>
 									<li><a href="products.html">create wishlist</a></li>
 								</ul>	
@@ -441,10 +451,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="h_nav">
 								<h4>account</h4>
 								<ul>
-									<li><a href="products.html">login</a></li>
-									<li><a href="products.html">create an account</a></li>
+									<li><a href="login.html">login</a></li>
+									<li><a href="register.html">create an account</a></li>
 									<li><a href="products.html">create wishlist</a></li>
-									<li><a href="products.html">my shopping bag</a></li>
+									<li><a href="single.html">my shopping bag</a></li>
 									<li><a href="products.html">brands</a></li>
 									<li><a href="products.html">create wishlist</a></li>
 								</ul>	
@@ -532,10 +542,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="h_nav">
 								<h4>account</h4>
 								<ul>
-									<li><a href="products.html">login</a></li>
-									<li><a href="products.html">create an account</a></li>
+									<li><a href="login.html">login</a></li>
+									<li><a href="register.html">create an account</a></li>
 									<li><a href="products.html">create wishlist</a></li>
-									<li><a href="products.html">my shopping bag</a></li>
+									<li><a href="single.html">my shopping bag</a></li>
 									<li><a href="products.html">brands</a></li>
 									<li><a href="products.html">create wishlist</a></li>
 								</ul>	
@@ -623,10 +633,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="h_nav">
 								<h4>account</h4>
 								<ul>
-									<li><a href="products.html">login</a></li>
-									<li><a href="products.html">create an account</a></li>
+									<li><a href="login.html">login</a></li>
+									<li><a href="register.html">create an account</a></li>
 									<li><a href="products.html">create wishlist</a></li>
-									<li><a href="products.html">my shopping bag</a></li>
+									<li><a href="single.html">my shopping bag</a></li>
 									<li><a href="products.html">brands</a></li>
 									<li><a href="products.html">create wishlist</a></li>
 								</ul>	
@@ -714,10 +724,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="h_nav">
 								<h4>account</h4>
 								<ul>
-									<li><a href="products.html">login</a></li>
-									<li><a href="products.html">create an account</a></li>
+									<li><a href="login.html">login</a></li>
+									<li><a href="register.html">create an account</a></li>
 									<li><a href="products.html">create wishlist</a></li>
-									<li><a href="products.html">my shopping bag</a></li>
+									<li><a href="single.html">my shopping bag</a></li>
 									<li><a href="products.html">brands</a></li>
 									<li><a href="products.html">create wishlist</a></li>
 								</ul>	
@@ -805,12 +815,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="h_nav">
 								<h4>account</h4>
 								<ul>
-									<li><a href="sarees.html">login</a></li>
-									<li><a href="sarees.html">create an account</a></li>
-									<li><a href="sarees.html">create wishlist</a></li>
-									<li><a href="sarees.html">my shopping bag</a></li>
-									<li><a href="sarees.html">brands</a></li>
-									<li><a href="sarees.html">create wishlist</a></li>
+									<li><a href="login.html">login</a></li>
+									<li><a href="register.html">create an account</a></li>
+									<li><a href="products.html">create wishlist</a></li>
+									<li><a href="single.html">my shopping bag</a></li>
+									<li><a href="products.html">brands</a></li>
+									<li><a href="products.html">create wishlist</a></li>
 								</ul>	
 							</div>						
 						</div>
@@ -896,10 +906,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="h_nav">
 								<h4>account</h4>
 								<ul>
-									<li><a href="products.html">login</a></li>
-									<li><a href="products.html">create an account</a></li>
+									<li><a href="login.html">login</a></li>
+									<li><a href="register.html">create an account</a></li>
 									<li><a href="products.html">create wishlist</a></li>
-									<li><a href="products.html">my shopping bag</a></li>
+									<li><a href="single.html">my shopping bag</a></li>
 									<li><a href="products.html">brands</a></li>
 									<li><a href="products.html">create wishlist</a></li>
 								</ul>	
@@ -1218,107 +1228,114 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 		<div class="clearfix"></div>
 		</div>
-		<div class="main-top">
-			<div class="col-md-8 banner">
-				<!-- start slider -->
-				<!----->
-				<div class="slider">	  
-					  <div class="callbacks_container">
-						  <ul class="rslides" id="slider">
-							 <li>
-								 <img src="images/slider1.jpg" alt=""/>
-							 </li>
-							 <li>
-								 <img src="images/slider2.jpg" alt=""/>
-							 </li>
-							 <li>
-								 <img src="images/slider3.jpg" alt=""/>
-							 </li>
-							 <li>
-								 <img src="images/slider4.jpg" alt=""/>
-							 </li>
-						  </ul>	      
-					  </div>
-				</div>
-				<!----->
-				<!-- end  slider -->
-		   </div>
-		   <div class="col-md-4 right-grid">
-				<div class="right-grid-top">
-					<div class="r-sale text-center">
-						<h6>Winter wear</h6>
-						<h2>Sale</h2>
+		<!-- start main -->
+<div class="main_bg">
+	<div class="main">	   		           	         
+		<!-- start span1_of_1 -->
+			<div class="left_content">
+			<div class="span_1_of_left">
+				<div class="grid images_3_of_2">
+						<ul id="etalage">
+							<li>
+								<a href="optionallink.html">
+									<img class="etalage_thumb_image" src="images/d1.jpg" class="img-responsive" />
+									<img class="etalage_source_image" src="images/d1.jpg" class="img-responsive" title="" />
+								</a>
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="images/d2.jpg" class="img-responsive" />
+								<img class="etalage_source_image" src="images/d2.jpg" class="img-responsive" title="" />
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="images/d3.jpg" class="img-responsive"  />
+								<img class="etalage_source_image" src="images/d3.jpg"class="img-responsive"  />
+							</li>
+						    <li>
+								<img class="etalage_thumb_image" src="images/d4.jpg" class="img-responsive"  />
+								<img class="etalage_source_image" src="images/d4.jpg"class="img-responsive"  />
+							</li>
+						</ul>
+						 <div class="clearfix"></div>		
+				  </div>
+
+			<!-- start span1_of_1 -->
+			<div class="span1_of_1_des">
+				  <div class="desc1">
+					<h3>Lorem Ipsum is simply dummy text </h3>
+					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+					<h5>Rs. 399 <a href="#">click for offer</a></h5>
+					<div class="available">
+						<h4>Available Options :</h4>
+						<ul>
+							<li>Color:
+								<select>
+								<option>Silver</option>
+								<option>Black</option>
+								<option>Dark Black</option>
+								<option>Red</option>
+							</select></li>
+							<li>Size:
+								<select>
+									<option>L</option>
+									<option>XL</option>
+									<option>S</option>
+									<option>M</option>
+								</select>
+							</li>
+							<li>Quality:
+								<select>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</li>
+						</ul>
+						<div class="btn_form">
+							<form>
+								<input type="submit" value="add to cart" title="" />
+							</form>
+						</div>
+						<span class="span_right"><a href="#">login to save in wishlist </a></span>
+						<div class="clearfix"></div>
 					</div>
-					<div class="r-discount">
-						<span>upto</span>
-						<h2>50%</h2>
-						<p>OFF</p>
-						<a href="#">shop now<i class="go"></i></a>
-					</div>
+					<div class="filter-by-color">
+				<h3>Filter by Color</h3>
+				<ul class="w_nav2">
+				<li><a class="color1" href="#"></a></li>
+				<li><a class="color2" href="#"></a></li>
+				<li><a class="color3" href="#"></a></li>
+				<li><a class="color4" href="#"></a></li>
+				<li><a class="color5" href="#"></a></li>
+				<li><a class="color10" href="#"></a></li>
+				<li><a class="color7" href="#"></a></li>
+				<li><a class="color8" href="#"></a></li>
+				<li><a class="color9" href="#"></a></li>
+				<li><a class="color10" href="#"></a></li>
+				<li><a class="color6" href="#"></a></li>
+				<li><a class="color13" href="#"></a></li>
+				<li><a class="color14" href="#"></a></li>
+				<li><a class="color15" href="#"></a></li>
+				<li><a class="color16" href="#"></a></li>
+				<li><a class="color17" href="#"></a></li>
+				<li><a class="color1" href="#"></a></li>
+				<li><a class="color3" href="#"></a></li>
+				<li><a class="color2" href="#"></a></li>
+			</ul>
+
+			</div>
+			
+			   	 </div>
+			   	</div>
 					<div class="clearfix"></div>
 				</div>
-				<div class="right-grid-bottom">
-					<div class="right-grid-bottom-left">
-						<h3>Deal of the Day</h3>
-						<p>Expires in 3:42:56</p>
-						<h5>Wireless Headphones</h5>
-						<h2>Extra 33% OFF</h2>
-						<a href="single.html">shop now<i class="go"></i></a>
-					</div>
-					<div class="right-grid-bottom-right">
-						<img src="images/headset.png" alt="" />
-					</div>
-					<div class="clearfix"></div>
-				</div>
-		   </div>
-		   <div class="clearfix"></div>
-		</div>
-		<div class="new-arrivals text-center">
-			<div class="col-md-3 new-arrival-head">
-				<h3>New Arrivals</h3>
-				<a class="btn btn-1 btn-1d" href="products.html">View All</a>
-			</div>
-			<div class="col-md-3 product-item">
-				<a href="products.html"><img src="images/watch.jpg" class="img-responsive" alt="" /></a>
-				<h3>Watches</h3>
-				<a href="single.html">Shop Now<i class="go"></i></a>
-			</div>
-			<div class="col-md-3 product-item">
-				<a href="products.html"><img src="images/men-jacket.jpg" class="img-responsive zoom-img" alt="" /></a>
-				<h3>jackets</h3>
-				<a href="single.html">Shop Now<i class="go"></i></a>
-			</div>
-			<div class="col-md-3 product-item">
-				<a href="products.html"><img src="images/shoes.jpg" class="img-responsive zoom-img" alt="" /></a>
-				<h3>Footwear</h3>
-				<a href="single.html">Shop Now<i class="go"></i></a>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-		<div class="best-sellers">
-			<div class="best-sellers-head">
-				<h3>Bestsellers</h3>
-			</div>
-			<div class="best-sellers-menu">
-				<ul>
-					<li><a class="active" href="#">Electronics</a></li>
-					<li><a href="#">Fashion</a></li>
-					<li><a href="#">Books</a></li>
-					<li><a href="#">Other</a></li>
-				</ul>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-		1111111111111111111111111111
-		1111111111111111111111111111
-		1111111111111111111111111111
-		1111111111111111111111111111
-		<div class="device">
-			<div class="course_demo">
+				<div class="device">
+			   <div class="course_demo">
 		          <ul id="flexiselDemo">	
 					<li>
 						<div class="ipad text-center">
-							<img src="{% static 'images/phone.jpg' %}" alt="" />
+							<img src="images/phone.jpg" alt="" />
 							<h4>Ipad Mini</h4>
 							<h3>$499</h3>
 							<ul>
@@ -1334,7 +1351,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</li>
 					<li>
 					<div class="ipad text-center">
-							<img src="{% static 'images/phone1.jpg' %}" alt="" />
+							<img src="images/phone1.jpg" alt="" />
 							<h4>Ipad Mini</h4>
 							<h3>$499</h3>
 							<ul>
@@ -1350,7 +1367,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</li>	
 					<li>
 					<div class="ipad text-center">
-							<img src="{% static 'images/phone2.jpg' %}" alt="" />
+							<img src="images/phone2.jpg" alt="" />
 							<h4>Ipad Mini</h4>
 							<h3>$499</h3>
 							<ul>
@@ -1366,7 +1383,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</li>	
 					<li>
 					<div class="ipad text-center">
-							<img src="{% static 'images/phone3.jpg' %}" alt="" />
+							<img src="images/phone3.jpg" alt="" />
 							<h4>Ipad Mini</h4>
 							<h3>$499</h3>
 							<ul>
@@ -1382,7 +1399,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</li>	
 					<li>
 					<div class="ipad text-center">
-							<img src="{% static 'images/phone4.jpg' %}" alt="" />
+							<img src="images/phone4.jpg" alt="" />
 							<h4>Ipad Mini</h4>
 							<h3>$499</h3>
 							<ul>
@@ -1399,92 +1416,93 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</ul>
 	  </div>
 	  </div>
-	  <div class="clients">
-		<div class="course_demo1">
-		          <ul id="flexiselDemo1">	
-					<li>
-						<div class="client">
-							<img src="{% static 'images/c1.jpg' %}" alt="" />
-						</div>
-					</li>
-					<li>
-					    <div class="client">
-							<img src="{% static 'images/c2.jpg' %}" alt="" />
-						</div>
-					</li>	
-					<li>
-					    <div class="client">
-							<img src="{% static 'images/c4.jpg' %}" alt="" />
-						</div>
-					</li>	
-					<li>
-					    <div class="client">
-							<img src="{% static 'images/c3.jpg' %}" alt="" />
-						</div>
-					</li>	
-					<li>
-						<div class="client">
-							<img src="{% static 'images/c5.jpg' %}" alt="" />
-						</div>
-					</li>	
-					<li>
-						<div class="client">
-							<img src="{% static 'images/c6.jpg' %}" alt="" />
-						</div>
-					</li>
-					<li>
-						<div class="client">
-							<img src="{% static 'images/c7.jpg' %}" alt="" />
-						</div>
-					</li>
-				</ul>
-			</div>
-			<link rel="stylesheet" href="{% static 'css/flexslider.css' %}" type="text/css" media="screen" />
-				<script type="text/javascript">
-			$(window).load(function() {
-				$("#flexiselDemo1").flexisel({
-					visibleItems: 7,
-					animationSpeed: 1000,
-					autoPlay: false,
-					autoPlaySpeed: 3000,    		
-					pauseOnHover: true,
-					enableResponsiveBreakpoints: true,
-			    	responsiveBreakpoints: { 
-			    		portrait: { 
-			    			changePoint:480,
-			    			visibleItems: 1
-			    		}, 
-			    		landscape: { 
-			    			changePoint:640,
-			    			visibleItems: 2
-			    		},
-			    		tablet: { 
-			    			changePoint:768,
-			    			visibleItems: 3
-			    		}
-			    	}
+			   	</div>
+
+	<div class="sub-cate single-subcate">
+				<div class=" top-nav rsidebar span_1_of_left">
+					<h3 class="cate">CATEGORIES</h3>
+		 <ul class="menu">
+		<li class="item1"><a href="#">Curabitur sapien<img class="arrow-img" src="images/arrow1.png" alt=""/> </a>
+			<ul class="cute">
+				<li class="subitem1"><a href="products.html">Cute Kittens </a></li>
+				<li class="subitem2"><a href="products.html">Strange Stuff </a></li>
+				<li class="subitem3"><a href="products.html">Automatic Fails </a></li>
+			</ul>
+		</li>
+		<li class="item2"><a href="#">Dignissim purus <img class="arrow-img " src="images/arrow1.png" alt=""/></a>
+			<ul class="cute">
+				<li class="subitem1"><a href="products.html">Cute Kittens </a></li>
+				<li class="subitem2"><a href="products.html">Strange Stuff </a></li>
+				<li class="subitem3"><a href="products.html">Automatic Fails </a></li>
+			</ul>
+		</li>
+		<li class="item3"><a href="#">Ultrices id du<img class="arrow-img img-arrow" src="images/arrow1.png" alt=""/> </a>
+			<ul class="cute">
+				<li class="subitem1"><a href="products.html">Cute Kittens </a></li>
+				<li class="subitem2"><a href="products.html">Strange Stuff </a></li>
+				<li class="subitem3"><a href="products.html">Automatic Fails</a></li>
+			</ul>
+		</li>
+		<li class="item4"><a href="#">Cras iacaus rhone <img class="arrow-img img-left-arrow" src="images/arrow1.png" alt=""/></a>
+			<ul class="cute">
+				<li class="subitem1"><a href="products.html">Cute Kittens </a></li>
+				<li class="subitem2"><a href="products.html">Strange Stuff </a></li>
+				<li class="subitem3"><a href="products.html">Automatic Fails </a></li>
+			</ul>
+		</li>
+				<li>
+			<ul class="kid-menu">
+				<li><a href="products.html">Tempus pretium</a></li>
+				<li ><a href="product.html">Dignissim neque</a></li>
+				<li ><a href="product.html">Ornared id aliquet</a></li>
+			</ul>
+		</li>
+		<ul class="kid-menu ">
+				<li><a href="products.html">Commodo sit</a></li>
+				<li ><a href="products.html">Urna ac tortor sc</a></li>
+				<li><a href="products.html">Ornared id aliquet</a></li>
+				<li><a href="products.html">Urna ac tortor sc</a></li>
+				<li ><a href="products.html">Eget nisi laoreet</a></li>
+				<li><a href="products.html">Faciisis ornare</a></li>
+				<li class="menu-kid-left"><a href="contact.html">Contact us</a></li>
+			</ul>
+	</ul>
+					</div>
+				<!--initiate accordion-->
+		<script type="text/javascript">
+			$(function() {
+			    var menu_ul = $('.menu > li > ul'),
+			           menu_a  = $('.menu > li > a');
+			    menu_ul.hide();
+			    menu_a.click(function(e) {
+			        e.preventDefault();
+			        if(!$(this).hasClass('active')) {
+			            menu_a.removeClass('active');
+			            menu_ul.filter(':visible').slideUp('normal');
+			            $(this).addClass('active').next().stop(true,true).slideDown('normal');
+			        } else {
+			            $(this).removeClass('active');
+			            $(this).next().stop(true,true).slideUp('normal');
+			        }
 			    });
-			    
+			
 			});
 		</script>
-		<script type="text/javascript" src="{% static 'js/jquery.flexisel.js' %}"></script>
-		</div>
-		<div class="transport-grid">
-			<div class="col-md-4 shipping">
-				<h3><i class="shipping-icon"></i>Free Shipping</h3>
-				<p>Syphogrants called into the council chamber, and these are changed every day. It is a fundamental rule of their government,</p>
+					<div class=" chain-grid menu-chain text-center">
+	   		     		<a href="single.html"><img class="img-responsive chain" src="images/phonei.jpg" alt=" " /></a>	   		     		
+	   		     		<div class="grid-chain-bottom chain-watch">
+		   		     		<span class="actual dolor-left-grid">300$</span>
+		   		     		<span class="reducedfrom">500$</span>  
+		   		     		<h6>Lorem ipsum dolor</h6>  		     			   		     										
+	   		     		</div>
+	   		     	</div>
+	   		     	 <a class="view-all all-product" href="products.html">VIEW ALL PRODUCTS<span> </span></a> 	
+					  <div class="clearfix"> </div>
 			</div>
-			<div class="col-md-4 shipping">
-				<h3><i class="correct-icon"></i>100 % Original</h3>
-				<p>Syphogrants called into the council chamber, and these are changed every day. It is a fundamental rule of their government,</p>
-			</div>
-			<div class="col-md-4 return">
-				<h3><i class="return-icon"></i>Free Return</h3>
-				<p>Syphogrants called into the council chamber, and these are changed every day. It is a fundamental rule of their government,</p>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	  </div>
+	 <div class="clearfix"> </div>
+</div>
+</div>
+</div>	
 	 <div class="footer">
 		<div class="wrap">
 			<div class="contact-section">
@@ -1539,7 +1557,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</ul>
 					<ul>
 						<li class="first"> boxshop </li> -
-						<li><a href="contact.html"> contact us </a></li> |
+						<li><a href=""> contact us </a></li> |
 						<li><a href=""> about us </a></li> |
 						<li><a href=""> careers </a></li> |
 						<li><a href=""> blog </a></li> |
@@ -1559,7 +1577,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="clearfix"></div>
 			</div>
 			<div class="cards text-center">
-				<img src="{% static 'images/cards.jpg' %}" alt="" />
+				<img src="images/cards.jpg" alt="" />
 			</div>
 			<div class="copyright text-center">
 				<p>Copyright &copy; 2015 All rights reserved | Template by  <a href="http://w3layouts.com">  W3layouts</a></p>
