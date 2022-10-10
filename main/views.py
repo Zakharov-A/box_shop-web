@@ -13,6 +13,15 @@ def store(request):
     return render(request, 'store.html')
 
 
+def blank(request):
+    return render(request, 'blank.html')
+
+
+def checkout(request):
+    return render(request, 'checkout.html')
+
+
+
 
 
 

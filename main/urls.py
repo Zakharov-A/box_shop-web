@@ -22,6 +22,8 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('product/', views.product, name='product'),
     path('store/', views.store, name='store'),
+    path('blank/', views.blank, name='blank'),
+    path('checkout/', views.checkout, name='checkout'),
     path('admin/', admin.site.urls),
 ]
 
