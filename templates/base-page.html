@@ -48,27 +48,27 @@
 						<li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
 					</ul>
 					<ul class="header-links pull-right">
-						<li><a href="#"><i class="fa fa-euro"></i>EUR</a></li>
+<!--						<li><a href="#"><i class="fa fa-euro"></i>EUR</a></li>-->
 
-	<div class="col-xl-4 col-lg-6 col-md-12 col-12 col-sm-12">
-		<div class="header-top-right">
-			<div class="header-top-right-flag f_right">
-				<ul>
-					<li class="language-dropdown dropdown">
-						<a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						{% if user.is_authenticated %}
-							{{ user.username }}
-						{% else %}
-                            Log In/Register
-						{% endif %}
-<!--						<i class="fas fa-arrow-down"></i></a>-->
-						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<a class="dropdown-item" href="{% url 'login' %}">Log In</a>
-							<a class="dropdown-item" href="{% url 'register' %}">Register</a>
-							<a class="dropdown-item" href="{% url 'logout' %}">Log Out</a>
-						 </div>
-					</li>
-					</ul>
+				<div class="col-xl-4 col-lg-6 col-md-12 col-12 col-sm-12">
+					<div class="header-top-right">
+						<div class="header-top-right-flag f_right">
+							<ul>
+								<li class="language-dropdown dropdown">
+									<a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									{% if user.is_authenticated %}
+										{{ user.username }}
+									{% else %}
+										Log In/Register
+									{% endif %}
+									<i class="fa fa-user-o" aria-hidden="true"></i></a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="{% url 'login' %}">Log In</a>
+										<a class="dropdown-item" href="{% url 'register' %}">Register</a>
+										<a class="dropdown-item" href="{% url 'logout' %}">Log Out</a>
+									 </div>
+								</li>
+								</ul>
 				</ul>
 			</div>
 		</div>
